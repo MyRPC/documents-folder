@@ -1,27 +1,29 @@
 
-# downloads-folder
+# documents-folder
 
-  Get the local downloads folder, for all major platforms.
+  Get the local documents folder, for all major platforms.
 
 ## Usage
 
 ```js
-const downloadsFolder = require('downloads-folder');
+const documentsFolder = require('@myrpc/documents-folder');
 
-console.log(downloadsFolder());
+console.log(documentsFolder());
 ```
 
 ## Installation
 
 ```bash
-$ npm install downloads-folder
+$ npm install @myrpc/documents-folder
+# OR
+$ yarn add @myrpc/documents-folder
 ```
 
 ## API
 
-### downloadsFolder()
+### documentsFolder()
 
-Return the location of the downloads folder for the current platform.
+Return the location of the documents folder for the current platform.
 
 __Warning__: On *nix, this will perform _synchronous_ operations, so don't
 place it where concurrency is required. It's probably the best to just
@@ -29,9 +31,9 @@ determine this folder once when your application starts.
 
 ## Algorithm
 
-- Mac OS X: `~/Downloads`
-- Windows: `~/Downloads`
-- *nix: `xdg-user-dir DOWNLOAD` || `~/Downloads` || `/tmp`
+- Mac OS X: `~/Documents`
+- Windows: `~/Documents`
+- *nix: `xdg-user-dir DOCUMENTS` || `~/Documents` || `/tmp`
 
 ## License
 
