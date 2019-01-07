@@ -2,13 +2,15 @@ import * as os from 'os';
 import { execSync } from 'child_process'
 import { statSync } from 'fs'
 
-export default {
-    darwin: darwin,
-    freebsd: unix,
-    linux: unix,
-    sunos: unix,
-    win32: windows
-}[os.platform()];
+export default () => {
+    return {
+        darwin: darwin,
+        freebsd: unix,
+        linux: unix,
+        sunos: unix,
+        win32: windows
+    }[os.platform()]();
+}
 
 export const darwin = () => {
   return `${process.env.HOME}/Documents`;
