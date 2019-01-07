@@ -1,6 +1,6 @@
-const downloads = require('.');
+import documents from './index';
 
-console.log(`System: ${downloads()}`);
-console.log(`Darwin: ${downloads.darwin()}`);
-console.log(`Unix: ${downloads.unix()}`);
-console.log(`Windows: ${downloads.windows()}`);
+console.log(`System: ${documents()}`);
+console.log(`Darwin: ${documents.darwin()}`);
+console.log(`Unix: ${documents.unix()}`);
+console.log(`Windows: ${documents.windows()}`);
